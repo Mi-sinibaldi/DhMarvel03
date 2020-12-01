@@ -15,7 +15,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/homemAranha" />
+        app:srcCompat="@drawable/homem_aranha" />
 
     <ImageView
         android:id="@+id/imageView3"
@@ -28,7 +28,7 @@
         app:layout_constraintHorizontal_bias="0.06"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/spiderMan" />
+        app:srcCompat="@drawable/spider_man" />
 
     <TextView
         android:id="@+id/textViewNameHQ"
