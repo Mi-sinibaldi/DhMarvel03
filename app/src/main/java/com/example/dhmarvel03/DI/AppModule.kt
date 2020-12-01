@@ -20,7 +20,7 @@ object AppModule {
     @Singleton
     @Provides
     fun provideRetrofit(gson: Gson): Retrofit = Retrofit.Builder()
-        .baseUrl("https://developer.marvel.com/")
+        .baseUrl("https://gateway.marvel.com:443/")
         .addConverterFactory(GsonConverterFactory.create(gson))
         .build()
 

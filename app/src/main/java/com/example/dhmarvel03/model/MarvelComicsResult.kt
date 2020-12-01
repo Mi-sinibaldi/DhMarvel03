@@ -1,5 +1,9 @@
 package com.example.dhmarvel03.model
 
+import android.os.Parcelable
+import com.google.gson.annotations.SerializedName
+import kotlinx.android.parcel.Parcelize
+
 data class MarvelComicsResult(
     val code: Int,
     val data: Data
@@ -10,15 +14,20 @@ data class Data(
     val limit: Int,
     val total: Int,
     val count: Int,
-    val results: Results
+    val results: CommicsResult
 )
 
-data class Results(
+@Parcelize
+data class CommicsResult(
+    @SerializedName("id")
     val id: Int,
-    val thumbnail: Thumbnail
-)
 
+    @SerializedName("thumbnail")
+    val thumbnail: Thumbnail
+): Parcelable
+
+@Parcelize
 data class Thumbnail(
     val path: String,
     val extension: String
-)
+): Parcelable

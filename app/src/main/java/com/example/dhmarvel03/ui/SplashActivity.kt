@@ -1,10 +1,11 @@
-package com.example.dhmarvel03
+package com.example.dhmarvel03.ui
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
+import com.example.dhmarvel03.R
 
 class SplashActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -17,7 +18,7 @@ class SplashActivity : AppCompatActivity() {
 
     private fun showMainActivity() {
         val intent = Intent(
-            this@SplashActivity, MainActivity::class.java
+            this@SplashActivity, LoginActivity::class.java
         )
         startActivity(intent)
         finish()
