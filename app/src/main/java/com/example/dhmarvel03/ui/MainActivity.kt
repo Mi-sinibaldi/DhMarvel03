@@ -13,6 +13,7 @@ import androidx.recyclerview.widget.GridLayoutManager
 import com.example.dhmarvel03.R
 import com.example.dhmarvel03.adapter.ItemHqAdapter
 import com.example.dhmarvel03.model.ComicsResult
+import com.example.dhmarvel03.viewModel.MarvelComicsViewModel
 import com.example.githubapp.utils.Resource
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.android.synthetic.main.activity_main.*
@@ -45,7 +46,7 @@ class MainActivity : AppCompatActivity(), ItemHqAdapter.ItemListener {
     }
 
     private fun setupObservers() {
-        viewModel.comics.observe(this, Observer {
+        viewModel.comics.observe(this, {
             when (it.status) {
                 Resource.Status.SUCCESS -> {
                     if (!it.data?.data?.results.isNullOrEmpty()) adapter.setItems(ArrayList(it.data?.data?.results))

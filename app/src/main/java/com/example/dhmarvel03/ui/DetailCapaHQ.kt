@@ -1,12 +1,11 @@
 package com.example.dhmarvel03.ui
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import com.bumptech.glide.Glide
 import com.example.dhmarvel03.R
 import com.example.dhmarvel03.model.ComicsResult
 import kotlinx.android.synthetic.main.activity_detail_capa_h_q2.*
-import kotlinx.android.synthetic.main.activity_detail_h_q.*
 
 class DetailCapaHQ : AppCompatActivity() {
 

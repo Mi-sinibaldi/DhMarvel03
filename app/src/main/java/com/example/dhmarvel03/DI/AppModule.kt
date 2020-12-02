@@ -1,6 +1,5 @@
 package com.example.dhmarvel03.DI
 
-import android.security.KeyChain.getPrivateKey
 import com.example.dhmarvel03.remote.MarvelComicsRemoteDataSource
 import com.example.dhmarvel03.remote.MarvelService
 import com.example.dhmarvel03.repository.MarvelComicsRepository
@@ -16,7 +15,6 @@ import retrofit2.converter.gson.GsonConverterFactory
 import java.security.MessageDigest
 import java.security.NoSuchAlgorithmException
 import javax.inject.Singleton
-import kotlin.experimental.and
 
 
 private const val KEY_PRIVATE = "26c85b031a298aaf59a7438bec22572fd89caf1d"
@@ -39,10 +37,11 @@ object AppModule {
     fun provideRetrofit(gson: Gson): Retrofit = Retrofit.Builder()
         .baseUrl(
             url?.newBuilder()
-            ?.addQueryParameter(TIME_STAMP_KEY, timeStamp)
-            ?.addQueryParameter(API_KEY, KEY_PUBLIC)
-            ?.addQueryParameter(HASH_KEY, generateHash(timeStamp,KEY_PUBLIC,KEY_PRIVATE))
-            ?.build())
+                ?.addQueryParameter(TIME_STAMP_KEY, timeStamp)
+                ?.addQueryParameter(API_KEY, KEY_PUBLIC)
+                ?.addQueryParameter(HASH_KEY, generateHash(timeStamp, KEY_PUBLIC, KEY_PRIVATE))
+                ?.build()
+        )
         .addConverterFactory(GsonConverterFactory.create(gson))
         .build()
 

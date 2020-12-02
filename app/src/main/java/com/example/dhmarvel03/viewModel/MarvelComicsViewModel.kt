@@ -1,8 +1,8 @@
-package com.example.dhmarvel03.ui
+package com.example.dhmarvel03.viewModel
 
+import androidx.hilt.lifecycle.ViewModelInject
 import androidx.lifecycle.ViewModel
 import com.example.dhmarvel03.repository.MarvelComicsRepository
-import androidx.hilt.lifecycle.ViewModelInject
 import java.security.MessageDigest
 import java.security.NoSuchAlgorithmException
 
@@ -14,7 +14,13 @@ class MarvelComicsViewModel @ViewModelInject constructor(
 ) : ViewModel() {
     private var timeStamp: String = System.currentTimeMillis().toString()
 
-    val comics = repository.getComics(timeStamp, KEY_PUBLIC,generateHash(timeStamp,KEY_PUBLIC,KEY_PRIVATE))
+    val comics = repository.getComics(
+        timeStamp, KEY_PUBLIC, generateHash(
+            timeStamp,
+            KEY_PUBLIC,
+            KEY_PRIVATE
+        )
+    )
 
     private fun generateHash(timestamp: String, publicKey: String, privateKey: String): String {
         try {

@@ -2,8 +2,8 @@ package com.example.githubapp.utils
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.liveData
-import androidx.lifecycle.map
-import com.example.githubapp.utils.Resource.Status.*
+import com.example.githubapp.utils.Resource.Status.ERROR
+import com.example.githubapp.utils.Resource.Status.SUCCESS
 import kotlinx.coroutines.Dispatchers
 
 fun <T> performGetOperation(

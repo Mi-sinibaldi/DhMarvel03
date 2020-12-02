@@ -3,4 +3,20 @@
     <string name="published_detail">Published:</string>
     <string name="price_detail">Price:</string>
     <string name="pages_detail">Pages:</string>
+    <string name="detail_title">Excepteur sint occaecat cupidatat non proident</string>
+    <string name="detail_desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</string>
+    <string name="detail_publi_item">TextView</string>
+    <string name="detail_price_item">TextView</string>
+    <string name="detail_pages_item">TextView</string>
+    <string name="title_login_welcome">Welcome to the Marvel HQ\'s</string>
+    <string name="email_logih">Email</string>
+    <string name="password_login">Password</string>
+    <string name="remember_login">Remember</string>
+    <string name="btn_login">Login</string>
+    <string name="btn_create_account">Create Account</string>
+    <string name="name_register">Name</string>
+    <string name="email_register">Email</string>
+    <string name="password_register">Password</string>
+    <string name="btn_save">Save</string>
+    <string name="item_hq">TextView</string>
 </resources>

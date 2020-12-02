@@ -1,13 +1,11 @@
 package com.example.dhmarvel03.adapter
 
 import android.annotation.SuppressLint
-import android.net.Uri
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
-import com.bumptech.glide.load.resource.bitmap.CircleCrop
 import com.example.dhmarvel03.R
 import com.example.dhmarvel03.model.ComicsResult
 import kotlinx.android.synthetic.main.item_hq_adapter.view.*
@@ -58,8 +56,8 @@ class ItemHqAdapterViewHolder(
     @SuppressLint("SetTextI18n")
     fun bind(item: ComicsResult) {
         this.commicsResult = item
-        var photo = item.thumbnail?.path+"."+item.thumbnail?.extension
-        photo = photo.replace("http://","https://")
+        var photo = item.thumbnail?.path + "." + item.thumbnail?.extension
+        photo = photo.replace("http://", "https://")
         view.textViewDescHq.text = "#${item.id}"
         Glide.with(view)
             .load(photo)

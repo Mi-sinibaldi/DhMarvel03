@@ -7,7 +7,6 @@ import com.bumptech.glide.Glide
 import com.example.dhmarvel03.R
 import com.example.dhmarvel03.model.ComicsResult
 import kotlinx.android.synthetic.main.activity_detail_h_q.*
-import kotlinx.android.synthetic.main.item_hq_adapter.view.*
 
 class DetailHQ : AppCompatActivity() {
 
@@ -51,7 +50,7 @@ class DetailHQ : AppCompatActivity() {
         textViewPagesItem.text = detail?.pageCount.toString()
     }
 
-    private fun clickImageCapa(){
+    private fun clickImageCapa() {
         imageViewCapa.setOnClickListener {
             val i = Intent(this, DetailCapaHQ::class.java)
             i.putExtra("detail", detail)

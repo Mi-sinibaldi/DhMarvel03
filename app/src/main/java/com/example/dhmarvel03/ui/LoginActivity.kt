@@ -1,12 +1,11 @@
 package com.example.dhmarvel03.ui
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
 import android.widget.TextView
-import androidx.appcompat.widget.Toolbar
+import androidx.appcompat.app.AppCompatActivity
 import com.example.dhmarvel03.R
 
 class LoginActivity : AppCompatActivity() {
