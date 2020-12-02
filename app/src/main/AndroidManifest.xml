@@ -12,17 +12,18 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.DhMarvel03">
-        <activity android:name="com.example.dhmarvel03.ui.SplashActivity" >
+        <activity android:name=".ui.DetailCapaHQ"></activity>
+        <activity android:name=".ui.SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.example.dhmarvel03.ui.RegisterActivity"></activity>
-        <activity android:name="com.example.dhmarvel03.ui.LoginActivity" />
-        <activity android:name="com.example.dhmarvel03.ui.DetailHQ" />
-
-        <activity android:name="com.example.dhmarvel03.ui.MainActivity">
+        <activity android:name=".ui.RegisterActivity" />
+        <activity android:name=".ui.LoginActivity" />
+        <activity android:name=".ui.DetailHQ" />
+        <activity android:name=".ui.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

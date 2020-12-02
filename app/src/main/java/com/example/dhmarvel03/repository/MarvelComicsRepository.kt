@@ -8,7 +8,7 @@ class MarvelComicsRepository @Inject constructor(
     private val remoteDataSource: MarvelComicsRemoteDataSource
 ) {
 
-    fun getComics() = performGetOperation(
-        networkCall = { remoteDataSource.getComics() }
+    fun getComics(timeStamp:String, apiKey: String, hash:String) = performGetOperation(
+        networkCall = { remoteDataSource.getComics(timeStamp,apiKey,hash) }
     )
 }

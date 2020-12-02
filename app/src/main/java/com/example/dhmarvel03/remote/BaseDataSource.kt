@@ -10,6 +10,8 @@ abstract class BaseDataSource {
         try {
             val response = call()
             if (response.isSuccessful) {
+                val bodyString = response.body().toString()
+
                 val body = response.body()
                 if (body != null) return Resource.success(body)
             }

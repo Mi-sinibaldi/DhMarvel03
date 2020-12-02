@@ -6,6 +6,6 @@ class MarvelComicsRemoteDataSource @Inject constructor(
     private val marvelService: MarvelService
 ) : BaseDataSource() {
 
-    suspend fun getComics() = getResult { marvelService.getComics() }
+    suspend fun getComics(timeStamp:String, apiKey: String, hash:String) = getResult { marvelService.getComics(timeStamp,apiKey,hash) }
 
 }
